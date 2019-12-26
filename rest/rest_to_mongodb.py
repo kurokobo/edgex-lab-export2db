@@ -51,7 +51,7 @@ def receive_data():
         type=data["readings"][0]["name"],
         value=data["readings"][0]["value"],
     )
-    return "Created", 200
+    return "Created", 201
 
 
 if __name__ == "__main__":
