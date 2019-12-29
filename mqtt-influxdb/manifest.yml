@@ -5,6 +5,7 @@ applications:
     docker:
       image: ((image))
     env:
+      TELEGRAF_HOSTNAME: ((TELEGRAF_HOSTNAME))
       INFLUXDB_URL: ((INFLUXDB_URL))
       INFLUXDB_TOKEN: ((INFLUXDB_TOKEN))
       INFLUXDB_ORGANIZATION: ((INFLUXDB_ORGANIZATION))
