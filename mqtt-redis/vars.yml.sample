@@ -1,0 +1,10 @@
+name: 
+instances: 
+memory: 
+
+REDIS_HOST: 
+REDIS_PORT: 
+REDIS_PASSWORD: 
+
+MQTT_BROKER: 
+MQTT_TOPIC: 

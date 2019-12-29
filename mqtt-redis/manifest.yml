@@ -1,0 +1,15 @@
+applications:
+  - name: ((name))
+    instances: ((instances))
+    memory: ((memory))
+    buildpacks:
+    - python_buildpack
+    env:
+      REDIS_HOST: ((REDIS_HOST))
+      REDIS_PORT: ((REDIS_PORT))
+      REDIS_PASSWORD: ((REDIS_PASSWORD))
+      MQTT_BROKER: ((MQTT_BROKER))
+      MQTT_TOPIC: ((MQTT_TOPIC))
+    command: python3 mqtt_to_redis.py
+    no-route: true
+    health-check-type: process

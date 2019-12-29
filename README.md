@@ -47,7 +47,7 @@ $ cf push --vars-file vars.yml
 To run this locally, update your `.env` and invoke followings:
 
 ```sh
-$ cd mqtt
+$ cd mqtt-mongodb
 $ python mqtt_to_mongodb.py
 ```
 
@@ -69,6 +69,30 @@ $ cf push --vars-file vars.yml
 To run this locally, update your `.env` and invoke followings:
 
 ```sh
-$ cd rest
+$ cd rest-mongodb
 $ python rest_to_mongodb.py
+```
+
+
+## Subscribe MQTT topic and then store in Redis
+
+The python application `mqtt-redis/rest_to_redis.py` does:
+
+1. Subscribe specified MQTT broker and its topic.
+1. Store incoming values in specified MongoDB.
+
+Prease note this application store only newest value of each sensor types. This behavior is completely different from other `mqtt-*` series in this repository.
+
+To run this on PWS, update your `vars.yml` and invoke followings:
+
+```sh
+$ cd mqtt-redis
+$ cf push --vars-file vars.yml 
+```
+
+To run this locally, update your `.env` and invoke followings:
+
+```sh
+$ cd mqtt-redis
+$ python mqtt_to_redis.py
 ```
