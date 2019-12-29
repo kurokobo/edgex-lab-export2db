@@ -1,0 +1,15 @@
+applications:
+  - name: ((name))
+    instances: ((instances))
+    memory: ((memory))
+    docker:
+      image: ((image))
+    env:
+      INFLUXDB_URL: ((INFLUXDB_URL))
+      INFLUXDB_TOKEN: ((INFLUXDB_TOKEN))
+      INFLUXDB_ORGANIZATION: ((INFLUXDB_ORGANIZATION))
+      INFLUXDB_BUCKET: ((INFLUXDB_BUCKET))
+      MQTT_BROKER: ((MQTT_BROKER))
+      MQTT_TOPIC: ((MQTT_TOPIC))
+    no-route: true
+    health-check-type: process

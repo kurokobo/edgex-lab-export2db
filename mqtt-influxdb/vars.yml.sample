@@ -1,0 +1,12 @@
+name: 
+instances: 
+memory: 
+image: docker.io/<username>/edgex-lab-telegraf:1.13.0
+
+INFLUXDB_URL: 
+INFLUXDB_TOKEN: 
+INFLUXDB_ORGANIZATION: 
+INFLUXDB_BUCKET: 
+
+MQTT_BROKER: <protocol>://<host>:<port>
+MQTT_TOPIC: 
